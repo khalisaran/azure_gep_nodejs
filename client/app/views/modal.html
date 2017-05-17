@@ -1,0 +1,24 @@
+<div>
+	<div class="modal-header">
+		<p>{{modalData.header}}</p>
+	</div>
+	<div class="modal-body">
+		<div ng-show="modalData.msgStatus">
+			<label for="surname">{{modalData.body}}</label> <br>
+		</div>
+		<br>
+		<div ng-show="modalData.errorStatus">
+			<label for="surname">Status : {{modalData.status}}</label> <br>
+			<br> <label for="surname" style="word-wrap: break-word;">Error
+				:{{modalData.error}}</label> <br> 
+			<!--	<br> <label for="surname"
+				style="word-wrap: break-word;">Exception:{{modalData.exception}}</label>
+			<br>-->
+			<!-- <label for="surname" ng-show ="modalData.errorStatus">Path: {{modalData.path}}</label> <br> -->
+			<!-- <label for="surname" ng-show ="modalData.errorStatus">{{modalData.error}}</label> <br> -->
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" ng-click="ok()">OK</button>
+	</div>
+</div>

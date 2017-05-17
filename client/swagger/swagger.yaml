@@ -1,0 +1,81 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Nodeappjs
+host: 34.193.74.68:9090
+basePath: /Nodeappjs_10024
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /Nodeappjs_Default_Activity/Nodeappjs:
+    put:
+      description: Update Nodeappjs
+      parameters:
+        - name: nodeappjs
+          in: body
+          description: json object
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Nodeappjs'
+      responses:
+        "200":
+          description: Success
+    get:
+      description: Get all Nodeappjs
+      responses:
+        "200":
+          description: Success
+    post:
+      description: Create Nodeappjs
+      parameters:
+        - name: nodeappjs
+          in: body
+          description: json object
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/Nodeappjs'
+      responses:
+        "201":
+          description: Success
+  /Nodeappjs_Default_Activity/Nodeappjs/{NodeappjsId}:
+    delete:
+      description: Delete Nodeappjs
+      parameters:
+        - name: NodeappjsId
+          in: path
+          description: id
+          required: true
+          type: integer
+
+      responses:
+        "204":
+          description: Success
+    get:
+      description: Get Nodeappjs by id
+      parameters:
+        - name: NodeappjsId
+          in: path
+          description: id
+          required: true
+          type: integer
+
+      responses:
+        "200":
+          description: Success
+
+definitions:
+  Nodeappjs:
+    required:
+      - name
+
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
